@@ -14,16 +14,32 @@ import org.jfree.data.category.DefaultCategoryDataset;
  * @version 1.0
  */
 public class DisplayChart extends ApplicationFrame {
+    /**
+     * A DisplayChart object to be used by main to display the chart
+     *
+     * @param title the title of the window frame
+     * @param chartTitle the title of the chart
+     */
     private DisplayChart(String title, String chartTitle) {
+        // The title of the window frame
         super(title);
+        // Create a chart with a title, x-axis title, y-axis title and dataset from CVS file
         JFreeChart lineChart = ChartFactory.createLineChart(chartTitle, "Days", "Index Value",
                 createDataset(), PlotOrientation.VERTICAL, true, true, false);
 
+        // The type of the chart is a line chart
         ChartPanel cp = new ChartPanel(lineChart);
+        // Size of the chart
         cp.setPreferredSize(new java.awt.Dimension(560, 367));
         setContentPane(cp);
     }
 
+    /**
+     * Create a dataset to be used in the chart
+     * TODO manipulate this data using CalculateMA.java
+     *
+     * @return a dataset to be graphed in the chart
+     */
     private DefaultCategoryDataset createDataset() {
         DefaultCategoryDataset ds = new DefaultCategoryDataset();
 
@@ -52,6 +68,12 @@ public class DisplayChart extends ApplicationFrame {
         return ds;
     }
 
+    /**
+     * A main method for displaying the chart
+     * This method could be moved into a user interface class of some sort.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         DisplayChart dc = new DisplayChart("Stock Market", "Index Value vs. Days");
 

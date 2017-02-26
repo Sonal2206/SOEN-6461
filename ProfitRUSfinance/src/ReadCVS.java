@@ -13,6 +13,7 @@ import java.io.IOException;
  * @since 20.02.2017
  */
 public class ReadCVS {
+    // Arrays the data will be divided into after reading.
     private String[] date;
     private float[] open, close, high, low, volume, adjClose;
     /**
@@ -53,37 +54,57 @@ public class ReadCVS {
                 i++;
 
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * Method to return a float array of "open" variables
+     * @return open
+     */
     public float[] getOpen() {
         return this.open;
     }
-
+    /**
+     * Method to return a float array of "close" variables
+     * @return array of close
+     */
     public float[] getClose() {
         return this.close;
     }
-
+    /**
+     * Method to return a float array of "low" variables
+     * @return array of low
+     */
     public float[] getLow() {
         return this.low;
     }
-
+    /**
+     * Method to return a float array of "high" variables
+     * @return array of high
+     */
     public float[] getHigh() {
         return this.high;
     }
-
+    /**
+     * Method to return a float array of "volume" variables
+     * @return array of volume
+     */
     public float[] getVolume() {
         return this.volume;
     }
-
+    /**
+     * Method to return a float array of "close" variables
+     * @return array of close
+     */
     public float[] getAdjClose() {
         return this.adjClose;
     }
-
+    /**
+     * Method to return a float array of "date" variables
+     * @return array of date
+     */
     public String[] getDate() {
         return this.date;
     }
