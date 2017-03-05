@@ -74,7 +74,6 @@ public class DisplayChart extends ApplicationFrame {
      *
      * @param args
      */
-    /*
     public static void main(String[] args) {
         DisplayChart dc = new DisplayChart("Stock Market", "Index Value vs. Days");
 
@@ -82,6 +81,6 @@ public class DisplayChart extends ApplicationFrame {
         RefineryUtilities.centerFrameOnScreen(dc);
         dc.setVisible(true);
     }
-*/
+
 
 }
